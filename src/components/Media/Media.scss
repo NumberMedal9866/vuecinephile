@@ -1,0 +1,100 @@
+.current-info{
+    min-height:90vh;
+    margin-top: 0;
+    position: relative;
+    &-block{
+        position: relative;
+    }
+    h2{
+        max-width: 1250px;
+    }
+    &-content{
+    padding-top: 102px;
+        > img{
+          filter: blur(25px);
+        }
+        .actors{
+            max-width: 100% !important;
+            justify-content: center;
+            &-content{
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: flex-end;
+                padding-bottom: 30px;
+            }
+        }
+    }
+    .poster{
+        width: 311px;
+        height: 462px;
+        position: absolute;
+        z-index: -1;
+        right: 246px;
+        top: 30px;
+        border-radius: 10px;
+        object-fit: cover;
+        @include media (640){
+            display: none;
+        }
+    }
+}
+.nav{
+    position: static;
+    
+}
+
+.media-descr-list{
+    display: flex;justify-content: space-evenly;
+    color: white;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 0;
+    @include media (640){
+        padding: 50px 10px;
+    }
+    li{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        h3{
+            font-size: 22px;
+        }
+        p{
+            font-size: 20px;
+            font-family: 'Montserrat';
+            font-weight: 400;
+        }
+        
+    }
+}
+.rec{
+    margin-bottom: 71px;
+    font-size: 22px;
+    color: white;
+    h2{
+        @include media (640){
+            text-align: center;
+        }
+    }
+    &-content{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        a{
+            width: 311px;
+            height: 462px;
+            border-radius: 10px;
+            border: 1px solid black;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+    }
+}
